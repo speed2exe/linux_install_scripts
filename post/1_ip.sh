@@ -1,0 +1,4 @@
+nmtui
+nmcli
+iwctl
+bluetoothctl
