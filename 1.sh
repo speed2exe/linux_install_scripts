@@ -35,7 +35,6 @@ lsblk
 echo 'press any key to begin...'
 read -s -n 1 input
 
-pacman -Sy reflector rsync
 reflector -a 10 -c sg -f 5 --sort rate --save /etc/pacman.d/mirrorlist
 pacstrap /mnt/ base linux linux-firmware git neovim btrfs-progs fzf
 
