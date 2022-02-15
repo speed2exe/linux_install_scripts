@@ -9,14 +9,14 @@
 ## Partition
 - check: `lsblk`
 - require 2 Partition
-    - EFI System Partition: 350M
-    - Linux File System: rest of disk space
+    - EFI System: 350M
+    - Linux filesystem: rest of disk space
 - action: `cfdisk /dev/the_disk_to_be_partitioned`
 
-## Run EFI Boot Script
+## Run 1.sh
 - supply 2 arg
-    - 1: EFI System Partition
-    - 2: Linux File System
+    - 1: EFI System
+    - 2: Linux filesystem
     - e.g. `./1 /dev/sda1 /dev/sda2`
 
-
+## Run 2.sh

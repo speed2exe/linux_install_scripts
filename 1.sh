@@ -1,4 +1,4 @@
-!#/bin/sh
+#!/bin/sh
 
 boot=$1
 volume=$2
@@ -15,8 +15,8 @@ then
     exit 1
 fi
 
-mkfs.vfat /dev/$boot
-mkfs.btrfs /dev/$volume
+mkfs.vfat $boot
+mkfs.btrfs $volume
 
 mount $volume /mnt
 btrfs subvolume create /mnt/@
