@@ -1,8 +1,5 @@
 #!/bin/sh
 
-echo "--- CHROOT MNT ---"
-arch-chroot /mnt
-
 echo "--- UPDATE SYSTEM CLOCK ---"
 timedatectl set-ntp true
 timedatectl status
@@ -30,7 +27,6 @@ echo '127.0.1.1         arch.localdomain' >> /etc/hosts
 
 
 echo "--- UPDATING MIRRORLIST ---"
-pacman -S reflector rsync
 reflector -a 10 -c sg -f 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 

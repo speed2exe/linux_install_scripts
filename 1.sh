@@ -36,9 +36,11 @@ echo 'press any key to begin...'
 read -s -n 1 input
 
 reflector -a 10 -c sg -f 5 --sort rate --save /etc/pacman.d/mirrorlist
-pacstrap /mnt/ base linux linux-firmware git neovim btrfs-progs fzf
+pacstrap /mnt/ base linux linux-firmware git neovim btrfs-progs fzf rsync reflector
 
 genfstab -U /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
 
-echo 'continue with the rest of the script by running 2.sh'
+echo 'to continue, you need to copy the 2.sh to /mnt '
+echo 'then arch-chroot /mnt'
+echo 'then run the 2.sh'
