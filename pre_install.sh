@@ -1,4 +1,0 @@
-lsblk
-
-# gdis
-
