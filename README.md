@@ -20,3 +20,11 @@
     - e.g. `./1 /dev/sda1 /dev/sda2`
 
 ## Run 2.sh
+- make sure you got internet connection
+- copy `2.sh` to `/mnt/`
+- do `arch-chroot /mnt`
+- run script
+
+
+## Run 3.sh
+- do `su zx` before running
