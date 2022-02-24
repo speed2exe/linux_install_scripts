@@ -33,6 +33,7 @@ pacman -Syu grub efibootmgr networkmanager network-manager-applet \
     dunst kitty noto-fonts-emoji slock thunar thunar-volman \
     lxappearance arc-gtk-theme breeze xdg-utils xclip \
     os-prober nitrogen gtk4 xbindkeys grub-btrfs doas noto-fonts-cjk \
+    pipewire-alsa pipewire-pulse pipewire-jack \
     --noconfirm
 
 
