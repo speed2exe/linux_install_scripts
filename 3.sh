@@ -17,26 +17,19 @@ echo "--- PARU SETUP ---"
 git clone https://aur.archlinux.org/paru-bin
 cd paru-bin/
 makepkg -si
-sudo paru -S timeshift timeshift-autosnap zramd microsoft-edge-stable-bin
+paru -S timeshift timeshift-autosnap zramd microsoft-edge-stable-bin
 cd ..
 
 
 echo "--- GRUB INSTALLATION ---"
 sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 sudo grub-mkconfig -o /boot/grub/grub.cfg
-echo 'edit /etc/default/grub, uncomment GRUB_DISABLE_OS_PROBER'
-echo 'press any key to begin...'
-read -s -n 1 input
-sudo nvim /etc/default/grub
+sudo sed -i '/#GRUB_DISABLE_OS_PROBER=false/c\GRUB_DISABLE_OS_PROBER=false' /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 
 echo "--- BTRFS SETUP ---"
-echo 'edit the mkinitcpio.conf: nvim /etc/mkinitcpio.conf'
-echo 'add btrfs to MODULES'
-echo 'press any key to begin...'
-read -s -n 1 input
-sudo nvim /etc/mkinitcpio.conf
+sudo sed -i '/MODULES=()/c\MODULES(btrfs)' /etc/mkinitcpio.conf
 sudo mkinitcpio -p linux
 
 
@@ -48,10 +41,7 @@ sudo systemctl enable fstrim.timer
 
 
 echo "BLUETOOTH AUTOENABLE"
-echo 'edit the AutoEnable in /etc/bluetooth/main.conf'
-echo 'press any key to begin...'
-read -s -n 1 input
-sudo nvim /etc/bluetooth/main.conf
+sudo sed -i '/#AutoEnable=false/c\AutoEnable=true' /etc/bluetooth/main.conf
 
 
 echo "--- CHANGING DEFAULT SHELL ---"
