@@ -1,5 +1,9 @@
-# TODO: wallpaper
 cd ~
+
+# put wallpaper
+mkdir wallpaper/
+mv /minimal_rocket.png /wallpaper/minimal_rocket.png
+
 
 echo "--- GETTING GITHUB CONFIGURATION ---"
 git clone https://github.com/speed2exe/dotfiles
@@ -18,7 +22,8 @@ echo "--- PARU SETUP ---"
 git clone https://aur.archlinux.org/paru-bin
 cd paru-bin/
 makepkg -si
-paru -S timeshift timeshift-autosnap zramd microsoft-edge-stable-bin
+paru -S timeshift timeshift-autosnap zramd microsoft-edge-stable-bin polybar \
+    --noconfirm
 cd ..
 
 
@@ -47,3 +52,5 @@ sudo sed -i '/#AutoEnable=false/c\AutoEnable=true' /etc/bluetooth/main.conf
 
 echo "--- CHANGING DEFAULT SHELL ---"
 chsh -s /usr/bin/fish
+
+rm -rf ~/.bashrc
