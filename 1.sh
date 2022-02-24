@@ -36,6 +36,7 @@ echo 'press any key to begin...'
 read -s -n 1 input
 
 reflector -a 10 -c sg -f 5 --sort rate --save /etc/pacman.d/mirrorlist
+echo 'ParallelDownloads = 5' >> /etc/pacman.conf
 pacstrap /mnt/ base linux linux-firmware git neovim btrfs-progs fzf rsync reflector sudo
 
 genfstab -U /mnt >> /mnt/etc/fstab
