@@ -32,8 +32,6 @@ mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@/home $v
 mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@/var $volume /mnt/var
 
 lsblk
-echo 'press any key to begin...'
-read -s -n 1 input
 
 reflector -a 10 -c sg -f 5 --sort rate --save /etc/pacman.d/mirrorlist
 echo 'ParallelDownloads = 5' >> /etc/pacman.conf

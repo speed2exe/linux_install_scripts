@@ -27,6 +27,7 @@ echo '127.0.1.1         arch.localdomain' >> /etc/hosts
 
 echo "--- UPDATING MIRRORLIST ---"
 reflector -a 10 -c sg -f 5 --sort rate --save /etc/pacman.d/mirrorlist
+echo 'ParallelDownloads = 5' >> /etc/pacman.conf
 
 
 echo "--- INSTALLING PACKAGES ---"
@@ -56,3 +57,5 @@ EDITOR=nvim visudo
 echo 'permit zx as root' > /etc/doas.conf
 rm -rf /root/
 ln -s /home/zx /root
+
+# TODO: su to zx and auto run script
