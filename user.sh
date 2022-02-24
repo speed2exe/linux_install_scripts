@@ -22,7 +22,8 @@ echo "--- PARU SETUP ---"
 git clone https://aur.archlinux.org/paru-bin
 cd paru-bin/
 makepkg -si
-paru -S timeshift timeshift-autosnap zramd microsoft-edge-stable-bin polybar \
+paru -S timeshift timeshift-autosnap zramd microsoft-edge-stable-bin \
+    polybar backlight_control \
     --noconfirm
 cd ..
 
