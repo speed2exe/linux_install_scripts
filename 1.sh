@@ -43,5 +43,6 @@ cp /etc/pacman.conf /mnt/etc/pacman.conf
 genfstab -U /mnt >> /mnt/etc/fstab
 
 cp 2.sh /mnt/root/.bashrc
+cp 3.sh /mnt/3.sh
 arch-chroot /mnt
 rm /mnt/root/.bashrc
