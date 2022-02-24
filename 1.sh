@@ -34,11 +34,13 @@ mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@/var $vo
 lsblk
 
 reflector -a 10 -c sg -f 5 --sort rate --save /etc/pacman.d/mirrorlist
-echo 'ParallelDownloads = 5' >> /etc/pacman.conf
+sed -i '/#ParallelDownloads = 5/c\ParallelDownloads = 5' /etc/pacman.conf
+
 pacstrap /mnt/ base linux linux-firmware git neovim btrfs-progs fzf rsync reflector sudo
+cp /etc/pacmand.d/mirrorlist /mnt/etc/pacmand.d/mirrorlist
+cp /etc/pacman.conf /mnt/etc/pacman.conf
 
 genfstab -U /mnt >> /mnt/etc/fstab
-cat /mnt/etc/fstab
 
 cp 2.sh /mnt/root/.bashrc
 arch-chroot /mnt

@@ -24,12 +24,6 @@ echo '127.0.0.1         localhost' >> /etc/hosts
 echo '::1               localhost' >> /etc/hosts
 echo '127.0.1.1         arch.localdomain' >> /etc/hosts
 
-
-echo "--- UPDATING MIRRORLIST ---"
-reflector -a 10 -c sg -f 5 --sort rate --save /etc/pacman.d/mirrorlist
-echo 'ParallelDownloads = 5' >> /etc/pacman.conf
-
-
 echo "--- INSTALLING PACKAGES ---"
 pacman -Syu grub efibootmgr networkmanager network-manager-applet \
     dialog wpa_supplicant mtools dosfstools base-devel linux-headers \
