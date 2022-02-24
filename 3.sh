@@ -1,4 +1,5 @@
 # TODO: wallpaper
+cd ~
 
 echo "--- GETTING GITHUB CONFIGURATION ---"
 git clone https://github.com/speed2exe/dotfiles
@@ -29,7 +30,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 
 echo "--- BTRFS SETUP ---"
-sudo sed -i '/MODULES=()/c\MODULES(btrfs)' /etc/mkinitcpio.conf
+sudo sed -i '/MODULES=()/c\MODULES=(btrfs)' /etc/mkinitcpio.conf
 sudo mkinitcpio -p linux
 
 
