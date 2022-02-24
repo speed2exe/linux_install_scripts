@@ -42,6 +42,6 @@ pacstrap /mnt/ base linux linux-firmware git neovim btrfs-progs fzf rsync reflec
 genfstab -U /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
 
-echo 'to continue, you need to copy the 2.sh to /mnt '
-echo 'then arch-chroot /mnt'
-echo 'then run the 2.sh'
+cp 2.sh /mnt/root/.bashrc
+arch-chroot /mnt
+rm /mnt/root/.bashrc

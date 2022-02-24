@@ -15,10 +15,9 @@ nvim /etc/locale.gen
 locale-gen
 cat /etc/locale.gen | sed -e '/^#/d' > /etc/locale.conf
 
-
+# TODO: set tup /etc/vconsole.conf
 echo 'set keyboard layout if different from US to vconsole.conf'
 echo 'eg. echo "KEYMAP=de_CH-latin1" >> /etc/vconsole.conf '
-
 
 echo 'arch' >> /etc/hostname
 echo '127.0.0.1         localhost' >> /etc/hosts

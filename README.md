@@ -28,3 +28,5 @@
 
 ## Run 3.sh
 - do `su zx` before running
+
+## Must be run in the current directory
