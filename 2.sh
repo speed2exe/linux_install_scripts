@@ -8,10 +8,9 @@ timezone=$(find /usr/share/zoneinfo -type f | fzf --reverse --height 30%)
 ln -sf $timezone /etc/localtime
 hwclock --systohc
 date
-echo 'uncomment a line in /etc/locale.gen to set locale'
-echo 'press any key to begin...'
-read -s -n 1 input
-nvim /etc/locale.gen
+echo 'Choose Locale:'
+chosen=$(cat /etc/locale.gen | fzf --reverse --height 30%)
+sed -i "s/${chosen}/${chosen:1}/" /etc/locale.gen
 locale-gen
 cat /etc/locale.gen | sed -e '/^#/d' > /etc/locale.conf
 
