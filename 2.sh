@@ -12,7 +12,8 @@ echo 'Choose Locale:'
 chosen=$(cat /etc/locale.gen | fzf --reverse --height 30%)
 sed -i "s/${chosen}/${chosen:1}/" /etc/locale.gen
 locale-gen
-cat /etc/locale.gen | sed -e '/^#/d' > /etc/locale.conf
+lang=($(cat /etc/locale.gen | sed -e '/^#/d'))
+echo "LANG=${lang[0]}" > /etc/locale.conf
 
 # TODO: set tup /etc/vconsole.conf
 echo 'set keyboard layout if different from US to vconsole.conf'

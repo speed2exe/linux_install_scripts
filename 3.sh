@@ -2,7 +2,7 @@ cd ~
 
 # put wallpaper
 mkdir wallpaper/
-mv /minimal_rocket.png /wallpaper/minimal_rocket.png
+sudo mv /minimal_rocket.png /wallpaper/minimal_rocket.png
 
 
 echo "--- GETTING GITHUB CONFIGURATION ---"
@@ -32,6 +32,7 @@ sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo sed -i '/#GRUB_DISABLE_OS_PROBER=false/c\GRUB_DISABLE_OS_PROBER=false' /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 
 
 echo "--- BTRFS SETUP ---"
@@ -52,5 +53,6 @@ sudo sed -i '/#AutoEnable=false/c\AutoEnable=true' /etc/bluetooth/main.conf
 
 echo "--- CHANGING DEFAULT SHELL ---"
 chsh -s /usr/bin/fish
+sudo chown -R zx ~
 
 rm -rf ~/.bashrc
