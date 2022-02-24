@@ -43,11 +43,7 @@ echo "setting zx password..."
 passwd zx
 usermod -aG wheel zx
 id zx
-echo 'enable wheel group: EDITOR=nvim visudo'
-echo 'uncomment %wheel ALL=(ALL) ALL'
-echo 'press any key to begin...'
-read -s -n 1 input
-EDITOR=nvim visudo
+sed -i '/# %wheel ALL=(ALL:ALL) ALL/c\%wheel ALL=(ALL:ALL) ALL' /etc/sudoers
 echo 'permit zx as root' > /etc/doas.conf
 rm -rf /root/
 ln -s /home/zx /root
