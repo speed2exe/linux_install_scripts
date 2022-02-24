@@ -49,5 +49,5 @@ echo 'permit zx as root' > /etc/doas.conf
 rm -rf /root/
 ln -s /home/zx /root
 
-mv /3.sh /home/zx/.bashrc
+mv /user.sh /home/zx/.bashrc
 su zx

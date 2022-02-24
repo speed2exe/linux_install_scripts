@@ -42,8 +42,8 @@ cp /etc/pacman.conf /mnt/etc/pacman.conf
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-cp 2.sh /mnt/root/.bashrc
-cp 3.sh /mnt/3.sh
+cp root.sh /mnt/root/.bashrc
+cp user.sh /mnt/user.sh
 cp minimal_rocket.png /mnt/minimal_rocket.png
 
 arch-chroot /mnt
