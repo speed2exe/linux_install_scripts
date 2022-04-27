@@ -29,7 +29,7 @@ pacman -Syu grub efibootmgr networkmanager network-manager-applet \
     dialog wpa_supplicant mtools dosfstools base-devel linux-headers \
     bluez bluez-utils xorg xorg-xinit exa fzf bat ripgrep neovim fish \
     neofetch which git trash-cli fortune-mod btop pkgfile dnsmasq \
-    fd gvfs picom sxhkd bspwm pinta maim rofi \
+    fd gvfs picom sxhkd bspwm pinta maim rofi words \
     dunst kitty noto-fonts-emoji slock thunar thunar-volman \
     lxappearance arc-gtk-theme breeze xdg-utils xclip \
     os-prober nitrogen gtk4 xbindkeys grub-btrfs doas noto-fonts-cjk \
