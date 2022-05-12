@@ -52,8 +52,7 @@ echo "BLUETOOTH AUTOENABLE"
 sudo sed -i '/#AutoEnable=false/c\AutoEnable=true' /etc/bluetooth/main.conf
 
 
-echo "--- CHANGING DEFAULT SHELL ---"
-chsh -s /usr/bin/fish
+echo "--- CHANGING DEFAULT OWNER ---"
 sudo chown -R zx ~
 
 rm -rf ~/.bashrc
