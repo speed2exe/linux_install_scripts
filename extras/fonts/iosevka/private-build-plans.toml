@@ -4,8 +4,12 @@
 family = "Iosevka Custom"
 spacing = "term"
 serifs = "sans"
-no-cv-ss = true
-no-ligation = true
+no-cv-ss = false
+no-ligation = false
+export-glyph-names = true
+
+[buildPlans.iosevka-custom.ligations]
+inherits = "dlig"
 
 [buildPlans.iosevka-custom.variants.design]
 capital-a = "straight-serifless"
