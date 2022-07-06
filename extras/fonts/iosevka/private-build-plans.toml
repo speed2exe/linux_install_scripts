@@ -1,17 +1,17 @@
 # config file generated from https://typeof.net/Iosevka/customizer
 
-[buildPlans.iosevka-custom]
-family = "Iosevka Custom"
+[buildPlans.iosevka2]
+family = "iosevka2"
 spacing = "term"
 serifs = "sans"
 no-cv-ss = false
 no-ligation = false
 export-glyph-names = true
 
-[buildPlans.iosevka-custom.ligations]
+[buildPlans.iosevka2.ligations]
 inherits = "dlig"
 
-[buildPlans.iosevka-custom.variants.design]
+[buildPlans.iosevka2.variants.design]
 capital-a = "straight-serifless"
 capital-b = "more-asymmetric-serifless"
 capital-c = "serifless"
