@@ -19,10 +19,13 @@ echo "LANG=${lang[0]}" > /etc/locale.conf
 echo 'set keyboard layout if different from US to vconsole.conf'
 echo 'eg. echo "KEYMAP=de_CH-latin1" >> /etc/vconsole.conf '
 
+
+echo "--- SETUP HOSTS ---"
 echo 'arch' >> /etc/hostname
 echo '127.0.0.1         localhost' >> /etc/hosts
 echo '::1               localhost' >> /etc/hosts
 echo '127.0.1.1         arch.localdomain' >> /etc/hosts
+
 
 echo "--- INSTALLING PACKAGES ---"
 pacman -Syu grub efibootmgr networkmanager network-manager-applet \
@@ -40,7 +43,7 @@ pacman -Syu grub efibootmgr networkmanager network-manager-applet \
 echo "--- SETUP USER ---"
 echo "setting root password..."
 passwd
-useradd -m zx
+useradd -m zx # TODO: dynamic user
 echo "setting zx password..."
 passwd zx
 usermod -aG wheel zx

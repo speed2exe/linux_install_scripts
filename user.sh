@@ -1,12 +1,18 @@
 cd ~
 
-
 echo "--- GETTING GITHUB CONFIGURATION ---"
 git clone https://github.com/speed2exe/dotfiles
 cd dotfiles
 fish load.fish
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+cd ..
+
+
+echo "--- GETTING EXTRAS CONFIGURATION ---"
+git clone https://github.com/speed2exe/linux_install_scripts
+cd linux_install_scripts/extras/fonts/
+fish fonts.fish
 cd ..
 
 
@@ -18,9 +24,12 @@ echo "--- PARU SETUP ---"
 git clone https://aur.archlinux.org/paru-bin
 cd paru-bin/
 makepkg -si
+sleep 5
 paru -S timeshift timeshift-autosnap zramd microsoft-edge-stable-bin \
     polybar backlight_control \
+    --noconfirm
 cd ..
+
 
 echo "--- GRUB INSTALLATION ---"
 sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
@@ -49,4 +58,5 @@ sudo sed -i '/#AutoEnable=false/c\AutoEnable=true' /etc/bluetooth/main.conf
 echo "--- CHANGING DEFAULT OWNER ---"
 sudo chown -R zx ~
 
-rm -rf ~/.bashrc
+
+rm ~/.bashrc
