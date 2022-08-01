@@ -16,7 +16,7 @@ then
 fi
 
 mkfs.vfat $boot
-mkfs.btrfs $volume
+mkfs.btrfs -f $volume
 
 mount $volume /mnt
 btrfs subvolume create /mnt/@
