@@ -28,8 +28,8 @@ umount /mnt
 mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@ $volume /mnt
 mkdir -p /mnt/{boot/efi,home,var}
 mount $boot /mnt/boot/efi
-mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@/home $volume /mnt/home
-mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@/var $volume /mnt/var
+mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@home $volume /mnt/home
+mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@var $volume /mnt/var
 
 lsblk
 
