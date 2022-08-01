@@ -24,9 +24,7 @@ cd paru-bin/
 makepkg -si
 paru -S timeshift timeshift-autosnap zramd microsoft-edge-stable-bin \
     polybar backlight_control \
-    --noconfirm
 cd ..
-
 
 echo "--- GRUB INSTALLATION ---"
 sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
@@ -48,7 +46,7 @@ sudo systemctl enable bluetooth
 sudo systemctl enable fstrim.timer
 
 
-echo "BLUETOOTH AUTOENABLE"
+echo "--- BLUETOOTH AUTOENABLE ---"
 sudo sed -i '/#AutoEnable=false/c\AutoEnable=true' /etc/bluetooth/main.conf
 
 
