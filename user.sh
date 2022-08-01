@@ -1,9 +1,5 @@
 cd ~
 
-# put wallpaper
-mkdir wallpaper/
-sudo mv /minimal_rocket.png /wallpaper/minimal_rocket.png
-
 
 echo "--- GETTING GITHUB CONFIGURATION ---"
 git clone https://github.com/speed2exe/dotfiles

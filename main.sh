@@ -47,7 +47,6 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 cp root.sh /mnt/root/.bashrc
 cp user.sh /mnt/user.sh
-cp minimal_rocket.png /mnt/minimal_rocket.png
 
 arch-chroot /mnt
 rm /mnt/root/.bashrc
