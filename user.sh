@@ -28,7 +28,7 @@ cd paru-bin/
 makepkg -si
 sleep 5
 paru -Syu timeshift timeshift-autosnap zramd microsoft-edge-stable-bin \
-    polybar backlight_control nvim-packer-git \
+    polybar backlight_control nvim-packer-git stderred-git \
     --noconfirm
 cd ..
 
