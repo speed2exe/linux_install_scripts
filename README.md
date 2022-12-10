@@ -24,5 +24,6 @@
   - at the grub menu, press `e`
   - find the line with starting word `linux`
   - add `nomodeset` to the end that line
+  - after installation, add `nomodeset` to `GRUB_CMDLINE_LINUX_DEFAULT` and rebuild grub
 - If you use nvidia graphics card to display screen
   - do `sudo pacman -Syu nvidia` after installation
