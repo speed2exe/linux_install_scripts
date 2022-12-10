@@ -10,7 +10,7 @@ echo "--- GETTING EXTRAS CONFIGURATION ---"
 git clone https://github.com/speed2exe/linux_install_scripts
 cd linux_install_scripts/extras/fonts/
 fish fonts.fish
-cd ..
+cd ~
 
 
 echo "--- STARSHIP INSTALLATION ---"
@@ -25,7 +25,7 @@ sleep 5
 paru -Syu timeshift timeshift-autosnap zramd microsoft-edge-stable-bin \
     polybar backlight_control nvim-packer-git stderred-git \
     --noconfirm
-cd ..
+cd ~
 
 
 echo "--- GRUB INSTALLATION ---"
