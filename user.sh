@@ -59,5 +59,7 @@ sudo sed -i '/#AutoEnable=false/c\AutoEnable=true' /etc/bluetooth/main.conf
 echo "--- CHANGING DEFAULT OWNER ---"
 sudo chown -R zx ~
 
+echo "--- AUTO STARTX AFTER LOGIN ---"
+echo "[[ -z \$DISPLAY && \$XDG_VTNR ]] && startx" >> ~/.bash_profile
 
 rm ~/.bashrc
