@@ -49,4 +49,3 @@ cp root.sh /mnt/root/.bashrc
 cp user.sh /mnt/user.sh
 
 arch-chroot /mnt
-rm /mnt/root/.bashrc
