@@ -5,11 +5,6 @@ git clone https://github.com/speed2exe/dotfiles
 cd dotfiles
 fish load.fish
 
-# vim-plug(deprecating, remove this if there's nothing wrong with nvim-packer)
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-cd ..
-
 
 echo "--- GETTING EXTRAS CONFIGURATION ---"
 git clone https://github.com/speed2exe/linux_install_scripts
