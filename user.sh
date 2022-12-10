@@ -8,7 +8,9 @@ fish load.fish
 
 echo "--- GETTING EXTRAS CONFIGURATION ---"
 git clone https://github.com/speed2exe/linux_install_scripts
-cd linux_install_scripts/extras/fonts/
+cd linux_install_scripts/extras
+sudo cp autologin/autologin.conf /etc/systemd/system/getty@tty1.service.d/autologin.conf
+cd fonts
 fish fonts.fish
 cd ~
 
