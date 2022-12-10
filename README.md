@@ -18,3 +18,9 @@
   - 1: EFI System Partition
   - 2: Linux Filesystem Partition
   - e.g. `./main.sh /dev/sda1 /dev/sda2`
+
+## Note
+- If not possible to boot with USB
+  - at the grub menu, press `e`
+  - find the line with starting word `linux`
+  - add `nomodeset` to the end that line
