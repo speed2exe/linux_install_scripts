@@ -51,5 +51,6 @@ id zx
 sed -i '/# %wheel ALL=(ALL:ALL) ALL/c\%wheel ALL=(ALL:ALL) ALL' /etc/sudoers
 echo 'permit zx as root' > /etc/doas.conf
 
+rm ~/.bashrc
 mv /user.sh /home/zx/.bashrc
 su zx
