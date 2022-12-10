@@ -34,7 +34,7 @@ pacman -Syu grub efibootmgr networkmanager network-manager-applet \
     neofetch which git trash-cli fortune-mod btop pkgfile dnsmasq \
     fd gvfs picom sxhkd bspwm pinta maim rofi words onefetch \
     dunst kitty noto-fonts-emoji slock thunar thunar-volman \
-    lxappearance arc-gtk-theme breeze xdg-utils xclip \
+    lxappearance arc-gtk-theme breeze xdg-utils xclip util-linux \
     os-prober nitrogen gtk4 xbindkeys grub-btrfs doas noto-fonts-cjk \
     pipewire-alsa pipewire-pulse pipewire-jack pamixer \
     --noconfirm
