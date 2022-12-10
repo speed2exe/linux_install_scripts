@@ -24,3 +24,5 @@
   - at the grub menu, press `e`
   - find the line with starting word `linux`
   - add `nomodeset` to the end that line
+- If you use nvidia graphics card to display screen
+  - do `sudo pacman -Syu nvidia` after installation
