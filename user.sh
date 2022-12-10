@@ -4,11 +4,13 @@ echo "--- GETTING GITHUB CONFIGURATION ---"
 git clone https://github.com/speed2exe/dotfiles
 cd dotfiles
 fish load.fish
+cd ~
 
 
 echo "--- GETTING EXTRAS CONFIGURATION ---"
 git clone https://github.com/speed2exe/linux_install_scripts
 cd linux_install_scripts/extras
+sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
 sudo cp autologin/autologin.conf /etc/systemd/system/getty@tty1.service.d/autologin.conf
 cd fonts
 fish fonts.fish
