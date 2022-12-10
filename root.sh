@@ -1,8 +1,6 @@
 #!/bin/sh
 
 echo "--- UPDATE SYSTEM CLOCK ---"
-timedatectl set-ntp true
-timedatectl status
 echo "Choose Timezone"
 timezone=$(find /usr/share/zoneinfo -type f | fzf --reverse --height 30%)
 ln -sf $timezone /etc/localtime
