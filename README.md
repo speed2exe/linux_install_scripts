@@ -19,11 +19,13 @@
   - 2: Linux Filesystem Partition
   - e.g. `./main.sh /dev/sda1 /dev/sda2`
 
-## Note
-- If not possible to boot with USB
+## Common problems
+- Black screen after boot
   - at the grub menu, press `e`
   - find the line with starting word `linux`
   - add `nomodeset` to the end that line
   - after installation, add `nomodeset` to `GRUB_CMDLINE_LINUX_DEFAULT` and rebuild grub
-- If you use nvidia graphics card to display screen
+- nvidia graphics card display issue
   - do `sudo pacman -Syu nvidia` after installation
+- USB ports not working during grub selection
+  - go to BIOS, disable `Fast Boot`
