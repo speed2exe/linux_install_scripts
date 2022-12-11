@@ -29,3 +29,10 @@
   - do `sudo pacman -Syu nvidia` after installation
 - USB ports not working during grub selection
   - go to BIOS, disable `Fast Boot`
+
+## Windows OS to appear in GRUB menu
+- install `ntfs-3g`
+- mount windows partition
+  - eg `sudo mount /dev/nvme0n1p3 /win`
+- rerun `grub-mkconfig`
+  - `sudo grub-mkconfig -o /boot/grub/grub.cfg`
