@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 #
-# curl https://raw.githubusercontent.com/speed2exe/linux_install_scripts/main/nix.sh | sudo bash
+# curl https://raw.githubusercontent.com/speed2exe/linux_install_scripts/main/nix.sh | sudo bash /dev/<boot_partition> /dev/<root_partition>
 
 boot=$1
 volume=$2
@@ -33,3 +33,4 @@ mount -o compress=zstd,subvol=@nix $volume /mnt/nix
 mount $boot /mnt/boot
 
 nixos-generate-config --root /mnt
+curl https://raw.githubusercontent.com/speed2exe/linux_install_scripts/main/configuration.nix > /mnt/etc/nixos/configuration.nix
