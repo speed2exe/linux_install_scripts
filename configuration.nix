@@ -29,5 +29,5 @@
   ];
 
   # Defines the first version of NixOS to be installed on this system.
-  system.stateVersion = "23.11"
+  system.stateVersion = "23.11";
 }
