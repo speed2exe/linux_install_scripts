@@ -19,13 +19,43 @@
   # Select Internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # User Management
+  users.users.zack2827 = {
+    isNormalUser = true;
+    home = "/home/zack2827";
+    extraGroups = [ "wheel" ];
+  };
 
-  # Essential Packages
+  # X
+  services.xserver = {
+    enable = true;
+    autorun = false;
+    displayManager.startx.enable = true;
+    windowManager.bspwm.enable = true;
+  };
+
+  # Fonts
+  fonts.packages = with pkgs; [
+    nerdfonts
+    jost
+  ];
+
+  # Packages
+  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-    neovim
-    wget
+    # Free
+    ## Desktop
+    sxhkd brightnessctl polybar rofi
+    ## Terminal
+    clang killall
+    starship fortune fzf
+    alacritty bat fish git fzf eza
+    neovim wget fd ripgrep
+    gh
+
+    # Unfree
+    ## Desktop
+    microsoft-edge 
   ];
 
   # Defines the first version of NixOS to be installed on this system.
