@@ -35,10 +35,21 @@
   };
 
   # Fonts
-  fonts.packages = with pkgs; [
-    nerdfonts
-    jost
-  ];
+  fonts.packages = with pkgs; [ nerdfonts jost ];
+
+  # Bluetooth
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+
+  # Sound
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
 
   # Programs
   programs.thunar.enable = true;
@@ -52,7 +63,7 @@
     dracula-theme dracula-icon-theme
     lxappearance picom nitrogen dunst
     ## Terminal
-    starship fortune fzf
+    starship fortune fzf btop
     alacritty bat fish git fzf eza
     neovim wget fd ripgrep
     gh killall clang gnumake
