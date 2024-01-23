@@ -52,11 +52,10 @@
     dracula-theme dracula-icon-theme
     lxappearance
     ## Terminal
-    clang killall
     starship fortune fzf
     alacritty bat fish git fzf eza
     neovim wget fd ripgrep
-    gh
+    gh killall clang gnumake
 
     # Unfree
     ## Desktop
