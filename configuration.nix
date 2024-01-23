@@ -40,12 +40,17 @@
     jost
   ];
 
+  # Programs
+  programs.thunar.enable = true;
+
   # Packages
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     # Free
     ## Desktop
     sxhkd brightnessctl polybar rofi
+    dracula-theme dracula-icon-theme
+    lxappearance
     ## Terminal
     clang killall
     starship fortune fzf
@@ -55,7 +60,7 @@
 
     # Unfree
     ## Desktop
-    microsoft-edge 
+    microsoft-edge
   ];
 
   # Defines the first version of NixOS to be installed on this system.
