@@ -50,7 +50,7 @@
     ## Desktop
     sxhkd brightnessctl polybar rofi
     dracula-theme dracula-icon-theme
-    lxappearance
+    lxappearance picom nitrogen dunst
     ## Terminal
     starship fortune fzf
     alacritty bat fish git fzf eza
