@@ -66,7 +66,7 @@
     starship fortune fzf btop
     alacritty bat fish git fzf eza
     neovim wget fd ripgrep
-    gh killall clang gnumake
+    gh killall gcc gnumake
 
     # Unfree
     ## Desktop
