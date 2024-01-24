@@ -51,27 +51,28 @@
     jack.enable = true;
   };
 
-  # Programs
-  programs.thunar.enable = true;
-
   # Packages
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     # Free
     ## Desktop
+    xfce.thunar
     sxhkd brightnessctl polybar rofi
     dracula-theme dracula-icon-theme
     lxappearance picom nitrogen dunst
     ## Terminal
     starship fortune fzf btop
     alacritty bat fish git fzf eza
-    neovim wget fd ripgrep
+    wget fd ripgrep neovim
     gh killall gcc gnumake
 
     # Unfree
     ## Desktop
     microsoft-edge
   ];
+
+  # Environment
+  environment.variables.EDITOR = "nvim";
 
   # Defines the first version of NixOS to be installed on this system.
   system.stateVersion = "23.11";
