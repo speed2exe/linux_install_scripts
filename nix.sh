@@ -37,4 +37,4 @@ nixos-generate-config --root /mnt
 curl https://raw.githubusercontent.com/speed2exe/linux_install_scripts/main/configuration.nix > /mnt/etc/nixos/configuration.nix
 nixos-install --no-root-password
 nixos-enter --root /mnt --command 'passwd zack2827'
-curl https://raw.githubusercontent.com/speed2exe/dotfiles/main/setup.sh | bash
+nixos-enter --root /mnt --command 'su zack2827 --command "curl https://raw.githubusercontent.com/speed2exe/dotfiles/main/setup.sh | bash"'
