@@ -54,16 +54,19 @@
   # Packages
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
+    # Nix
+    home-manager
+
     # Free
     ## Desktop
-    xfce.thunar
+    xfce.thunar flameshot xclip
     sxhkd brightnessctl polybar rofi
     dracula-theme dracula-icon-theme
     lxappearance picom nitrogen dunst
     ## Terminal
     starship fortune fzf btop
     alacritty bat fish git fzf eza
-    wget fd ripgrep neovim
+    wget fd ripgrep neovim procs
     gh killall gcc gnumake
 
     # Unfree
