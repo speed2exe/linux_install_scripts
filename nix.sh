@@ -34,3 +34,4 @@ mount $boot /mnt/boot
 
 nixos-generate-config --root /mnt
 curl https://raw.githubusercontent.com/speed2exe/linux_install_scripts/main/configuration.nix > /mnt/etc/nixos/configuration.nix
+nixos-install
