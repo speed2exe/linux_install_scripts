@@ -1,6 +1,7 @@
 #! /usr/bin/env bash
 #
-# curl https://raw.githubusercontent.com/speed2exe/linux_install_scripts/main/nix.sh | sudo bash /dev/<boot_partition> /dev/<root_partition>
+# ...after setting up network and disk
+# curl https://raw.githubusercontent.com/speed2exe/linux_install_scripts/main/nix.sh | bash -s -- /dev/<boot_partition> /dev/<root_partition>
 
 boot=$1
 volume=$2
@@ -34,4 +35,6 @@ mount $boot /mnt/boot
 
 nixos-generate-config --root /mnt
 curl https://raw.githubusercontent.com/speed2exe/linux_install_scripts/main/configuration.nix > /mnt/etc/nixos/configuration.nix
-nixos-install
+nixos-install --no-root-password
+nixos-enter --root /mnt --command 'passwd zack2827'
+curl https://raw.githubusercontent.com/speed2exe/dotfiles/main/setup.sh | bash
