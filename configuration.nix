@@ -2,31 +2,31 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ # Hardware
       ./hardware-configuration.nix
     ];
 
-  # Use the systemd-boot EFI boot loader.
+  # Boot loader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Easiest to use and most distros use this by default.
+  # Network
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
+  # Time zone
   time.timeZone = "Asia/Singapore";
 
-  # Select Internationalisation properties.
+  # Internationalisation
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # User Management
+  # Users
   users.users.zack2827 = {
     isNormalUser = true;
     home = "/home/zack2827";
     extraGroups = [ "wheel" ];
   };
 
-  # X
+  # X11
   services.xserver = {
     enable = true;
     autorun = false;
