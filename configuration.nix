@@ -62,7 +62,7 @@
     xfce.thunar flameshot xclip
     sxhkd brightnessctl polybar rofi
     dracula-theme dracula-icon-theme
-    lxappearance picom nitrogen dunst
+    lxappearance dunst
     ## Terminal
     starship fortune fzf btop
     alacritty bat fish git fzf eza
