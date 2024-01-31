@@ -59,7 +59,7 @@
 
     # Free
     ## Desktop
-    xfce.thunar flameshot xclip
+    flameshot xclip
     sxhkd brightnessctl polybar rofi
     dracula-theme dracula-icon-theme
     lxappearance dunst
@@ -73,6 +73,16 @@
     ## Desktop
     microsoft-edge
   ];
+
+  # https://nixos.wiki/wiki/Thunar
+  programs.thunar.enable = true;
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-media-tags-plugin
+    thunar-volman
+  ];
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
 
   # direnv
   programs.direnv.enable = true;
@@ -90,3 +100,4 @@
   # Defines the first version of NixOS to be installed on this system.
   system.stateVersion = "23.11";
 }
+
