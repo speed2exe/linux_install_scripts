@@ -59,13 +59,13 @@
 
     # Free
     ## Desktop
-    flameshot xclip
+    xclip maim pinta xdotool picom
     sxhkd brightnessctl polybar rofi
     dracula-theme dracula-icon-theme
-    lxappearance dunst
+    lxappearance dunst nitrogen
     ## Terminal
-    starship fortune fzf btop
-    alacritty bat fish git fzf eza
+    starship fortune fzf btop fish
+    alacritty bat git fzf eza
     wget fd ripgrep neovim procs
     gh killall gcc gnumake
 
