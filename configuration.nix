@@ -97,6 +97,9 @@
   # Environment
   environment.variables.EDITOR = "nvim";
 
+  # Flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Defines the first version of NixOS to be installed on this system.
   system.stateVersion = "23.11";
 }
