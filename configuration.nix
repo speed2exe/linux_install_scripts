@@ -57,21 +57,16 @@
     # Nix
     home-manager
 
-    # Free
     ## Desktop
     xclip maim pinta xdotool picom
     sxhkd brightnessctl polybar rofi
     dracula-theme dracula-icon-theme
-    lxappearance dunst nitrogen
+    lxappearance dunst nitrogen firefox
     ## Terminal
     starship fortune fzf btop fish
     alacritty bat git fzf eza
     wget fd ripgrep neovim procs
-    gh killall gcc gnumake
-
-    # Unfree
-    ## Desktop
-    microsoft-edge
+    gh killall gcc gnumake tree
   ];
 
   # https://nixos.wiki/wiki/Thunar
