@@ -61,7 +61,8 @@
     xclip maim pinta xdotool picom
     sxhkd brightnessctl polybar rofi
     dracula-theme dracula-icon-theme
-    lxappearance dunst nitrogen firefox
+    lxappearance dunst nitrogen
+    microsoft-edge firefox
     ## Terminal
     starship fortune fzf btop fish
     alacritty bat git fzf eza
