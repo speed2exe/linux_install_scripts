@@ -40,3 +40,4 @@ nixos-install --no-root-password
 # commands have issues running automatically after previous command
 nixos-enter --command 'passwd zack2827'
 nixos-enter --command 'su zack2827 --command "curl https://raw.githubusercontent.com/speed2exe/dotfiles/main/setup.sh | bash"'
+
