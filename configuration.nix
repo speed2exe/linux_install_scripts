@@ -68,6 +68,7 @@
     alacritty bat git fzf eza
     wget fd ripgrep neovim procs
     gh killall gcc gnumake tree
+    tmux
   ];
 
   # https://nixos.wiki/wiki/Thunar
