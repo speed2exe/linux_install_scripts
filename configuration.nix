@@ -71,6 +71,9 @@
     tmux
   ];
 
+  # https://github.com/Mic92/nix-ld
+  programs.nix-ld.enable = true;
+
   # https://nixos.wiki/wiki/Thunar
   programs.thunar.enable = true;
   programs.thunar.plugins = with pkgs.xfce; [
