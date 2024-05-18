@@ -1,5 +1,6 @@
 { config, pkgs, libs, ... }:
 
+let unstable = import <nixos-unstable> {}; in
 {
   imports =
     [ # Hardware
@@ -66,9 +67,11 @@
     ## Terminal
     starship fortune fzf btop fish
     alacritty bat git fzf eza
-    wget fd ripgrep neovim procs
+    wget fd ripgrep procs
     gh killall gcc gnumake tree
-    tmux
+    tmux st
+
+    unstable.neovim
   ];
 
   # https://github.com/Mic92/nix-ld
