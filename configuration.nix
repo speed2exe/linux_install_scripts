@@ -1,6 +1,8 @@
 { config, pkgs, libs, ... }:
 
-let unstable = import <nixos-unstable> {}; in
+let
+  unstable = import (fetchTarball https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz) {};
+in
 {
   imports =
     [ # Hardware
