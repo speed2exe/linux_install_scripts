@@ -92,12 +92,12 @@ in
   # direnv
   programs.direnv.enable = true;
 
-  # GPG sign
-  programs.gnupg.agent = {
-     enable = true;
-     pinentryFlavor = "tty"; # export GPG_TTY=$(tty)
-     enableSSHSupport = true;
-  };
+  # # GPG sign
+  # programs.gnupg.agent = {
+  #    enable = true;
+  #    pinentryFlavor = "tty"; # export GPG_TTY=$(tty)
+  #    enableSSHSupport = true;
+  # };
 
   # Environment
   environment.variables.EDITOR = "nvim";
