@@ -92,6 +92,16 @@ in
   # direnv
   programs.direnv.enable = true;
 
+  # https://wiki.hyprland.org/Nix/Hyprland-on-NixOS/
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+  environment.sessionVariables = {
+    WRL_NO_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE_WL = "1";
+  };
+
   # # GPG sign
   # programs.gnupg.agent = {
   #    enable = true;
