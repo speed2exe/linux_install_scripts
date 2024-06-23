@@ -67,11 +67,11 @@ in
     lxappearance dunst nitrogen
     microsoft-edge firefox
     ## Terminal
-    starship fortune fzf btop fish
+    starship fortune fzf btop
     alacritty bat git fzf eza
     wget fd ripgrep procs
     gh killall gcc gnumake tree
-    tmux st
+    tmux glib
 
     unstable.neovim
   ];
