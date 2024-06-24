@@ -72,6 +72,8 @@ in
     wget fd ripgrep procs
     gh killall gcc gnumake tree
     tmux glib
+    # Wayland
+    wl-clipboard
 
     unstable.neovim
   ];
@@ -101,6 +103,7 @@ in
     WRL_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
   };
+  programs.waybar.enable = true;
 
   # # GPG sign
   # programs.gnupg.agent = {
