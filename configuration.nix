@@ -62,7 +62,9 @@ in
 
     ## Desktop
     xclip maim pinta xdotool picom
-    sxhkd brightnessctl polybar rofi
+    sxhkd brightnessctl polybar
+    # rofi
+    rofi-wayland
     dracula-theme dracula-icon-theme
     lxappearance dunst nitrogen
     microsoft-edge firefox
@@ -94,16 +96,15 @@ in
   # direnv
   programs.direnv.enable = true;
 
-  # https://wiki.hyprland.org/Nix/Hyprland-on-NixOS/
-  programs.hyprland = {
+  programs.waybar.enable = true;
+  environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
+  environment.variables.NIXOS_OZONE_WL = "1";
+
+  # SwayWM
+  programs.sway = {
     enable = true;
     xwayland.enable = true;
   };
-  environment.sessionVariables = {
-    WRL_NO_HARDWARE_CURSORS = "1";
-    NIXOS_OZONE_WL = "1";
-  };
-  programs.waybar.enable = true;
 
   # # GPG sign
   # programs.gnupg.agent = {
@@ -121,4 +122,3 @@ in
   # Defines the first version of NixOS to be installed on this system.
   system.stateVersion = "23.11";
 }
-
